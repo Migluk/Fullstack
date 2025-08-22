@@ -29,6 +29,7 @@ const Books = () => {
 
   return (
     <div>
+      <h1>My Books</h1>
       <table>
         <thead>
           <tr>
@@ -47,18 +48,24 @@ const Books = () => {
               <td>{book.title}</td>
               <td>
                 <button>
-                  <Link to={"/edit/" + book.id}>Edit</Link>
+                  <Link className="btn btn-blue" to={"/edit/" + book.id}>
+                    Edit
+                  </Link>
                 </button>
               </td>
               <td>
-                <button onClick={() => handleDelete(book.id)}>Delete</button>
+                <button className="btn btn-red" onClick={() => handleDelete(book.id)}>
+                  Delete
+                </button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
       <button>
-        <Link to="/add">Add new book</Link>
+        <Link className="btn btn-xl btn-green" to="/add">
+          Add new book
+        </Link>
       </button>
     </div>
   );

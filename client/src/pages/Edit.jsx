@@ -29,9 +29,13 @@ const Edit = () => {
   return (
     <div>
       <h1>Edit book</h1>
-      <input type="text" placeholder="author" onChange={handleChange} name="author" />
-      <input type="text" placeholder="title" onChange={handleChange} name="title" />
-      <button onClick={handleClick}>Update</button>
+      <div className="form">
+        <input type="text" placeholder="author" onChange={handleChange} name="author" />
+        <input type="text" placeholder="title" onChange={handleChange} name="title" />
+        <button className="btn btn-xl btn-blue" onClick={handleClick}>
+          Update
+        </button>
+      </div>
     </div>
   );
 };

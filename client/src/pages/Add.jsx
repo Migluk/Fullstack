@@ -27,9 +27,13 @@ const Add = () => {
   return (
     <div>
       <h1>Add new book</h1>
-      <input type="text" placeholder="author" onChange={handleChange} name="author" />
-      <input type="text" placeholder="title" onChange={handleChange} name="title" />
-      <button onClick={handleClick}>Add</button>
+      <div className="form">
+        <input type="text" placeholder="author" onChange={handleChange} name="author" />
+        <input type="text" placeholder="title" onChange={handleChange} name="title" />
+        <button className="btn btn-xl btn-green" onClick={handleClick}>
+          Add
+        </button>
+      </div>
     </div>
   );
 };
